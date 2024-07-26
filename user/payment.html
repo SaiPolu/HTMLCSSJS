@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user payment</title>
+    <link rel="stylesheet" href="./payment.css">
+</head>
+
+<body>
+    <div class="user-payment-method">
+        <section>
+            <h2>Choose your payment method</h2>
+            <div class="payment-method">
+                <div class="method">
+                    <img src="../assets/paymentGateway/upi.png" alt="">
+                    <label for="credit-card">Creditcard</label>
+                </div>
+                <div class="method">
+                    <img src="../assets/paymentGateway/upi.png" alt="">
+                    <label for="credit-card">upi</label>
+                </div>
+
+                <div class="method">
+                    <img src="../assets/paymentGateway/cash.svg" alt="">
+                    <label for="cash">Cash</label>
+                </div>
+                <div class="method">
+                    <img src="../assets/paymentGateway/eWallet.svg" alt="">
+                    <label for="e-wallet">E-Wallet</label>
+                </div>
+            </div>
+            <form id="payment-form">
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" placeholder="1234 5679 9012 3456">
+                </div>
+                <div id="cvv-expiry">
+                    <div class="form-group">
+                        <label for="cvv">CVV Number</label>
+                        <input type="text" id="cvv" placeholder="123">
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry-date">Expiry Date</label>
+                        <input type="text" id="expiry-date" placeholder="MM/YYYY">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name-on-card">Name On Cardr</label>
+                    <input type="text" id="nam-on-card" placeholder="Name">
+                </div>
+            </form>
+        </section>
+        <section>
+            <div class="summary">
+                <h3>Summary</h3>
+                <section>
+                    <div><span>Sub Total:</span><span>&#8377;40/-</span></div>
+                    <div><span>Service Charges:</span><span>&#8377;10/-</span></div>
+                </section>
+                <section>
+                    <div><span>Total Payables:</span><span>&#8377;50/-</span></div>
+                </section>
+            </div>
+            <span class="coupon">Have coupon discount?</span>
+        </section>
+    </div>
+    <div class="buttons">
+        <button type="button" onclick="goBack()">Go back</button>
+        <p>By Clicking check out button you agree with out terms and conditions and money back guarnteye.Thank you for
+            trusting our services</p>
+        <button  id="checkout-button">Check Out</button>
+    </div>
+    <!-- <div class="checkout-button-event">
+        <button>submit</button>
+
+    </div> -->
+    <div class="feedback" id="feedback">
+        <h1>Please Provide Feedback</h1>
+        <span>&times;</span>
+        <h3>Ratings</h3>
+        <span>*****</span>
+        <button id="submit">submit</button>
+
+    </div>
+    <div id="visit-again">
+        <img src="../assets/thankyou.svg" alt="">
+        <h1>Please Visit Again</h1>
+    </div>
+
+    <script src="./payment.js"></script>
+</body>
+
+</html>
+
+
+styles.css
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f8f7fc;
+}
+.user-payment-method{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 60px;
+    box-shadow: 1px 1px 5px 3px lightgray;
+
+}
+h2{
+    margin: 15px 0px;
+}
+.user-payment-method>section:first-child{
+    width: 60%;
+}
+.payment-method,form{
+    background-color: white;
+    border-radius: 10px;
+
+}
+.payment-method{
+    display: flex;
+    justify-content: space-between;
+    font-size: medium;
+    
+}
+.method{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 20px;
+
+}
+form{
+    padding: 30px 40px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px 3px lightgray;
+}
+#payment-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#payment-form>div{
+    display: flex;
+    
+}
+#cvv-expiry>div{
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    
+}
+form input{
+    padding: 7px 6px;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    margin: 10px 5px;
+}
+.user-payment-method>section:last-child{
+    padding: 15px 30px;
+    width: 30%;
+}
+
+.summary h3{
+    margin: 15px 0px;
+}
+.summary>section>div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.summary>section:last-child{
+    border-top: 1px solid black;
+    padding-top: 20px;
+}
+.summary>section  span:last-child{
+    font-weight: bolder;
+}
+.coupon{
+    color: #236bae;
+    text-decoration: underline;
+    display: block;
+    text-align: right;
+}
+button{
+    cursor: pointer;
+    margin-right: 3px;
+    padding: 5px 20px;
+}
+.buttons{
+    border-top: 1px solid black;
+    padding: 30px 60px;
+    padding-top: 20px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    
+}
+.buttons p{
+    width: 38%;
+    margin-left: 35%;
+}
+.buttons>button:first-child{
+    background-color: transparent;
+    border: 1px solid rgb(174, 174, 237);
+    border-radius: 10px;
+    
+    color: rgb(94, 94, 244);
+
+}
+.buttons>button:last-child{
+    background-color:#236bae;
+    border: 1px solid ;
+    border-radius: 10px;
+    
+    color: white;
+
+}
+
+.checkout-button-event{
+    width: 350px;
+    height: 80vh;
+    border-radius: 10px;
+    position: absolute;
+    left: 30%;
+    top: 7%;
+}
+.checkout-button-event button{
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+}
+@media screen and (max-width:1023px) {
+    .user-payment-method{
+        flex-direction: column;
+        padding: 10px;
+    }
+    .user-payment-method>section>h2{
+        font-size: large;
+    }
+    .user-payment-method>section:first-child{
+        width: 100%;
+    }
+    form{
+        padding: 30px 20px;
+       
+    }
+    .user-payment-method>section:last-child{
+        padding: 15px 30px;
+        width: 100%;
+    }
+    .buttons{
+        border-top: 1px solid black;
+        padding: 20px  10px;
+        margin: 20px 5px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: small;
+        
+        
+    }
+    button{
+        padding: 0px 10px;
+        /* width: 100px; */
+        background-color: transparent;
+    }
+    .buttons p{
+        font-size: small;
+        margin-left: 0px;
+        
+    }
+
+    
+}
+
+
+.feedback
+{
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    padding: 15px 20px;
+    
+    border-radius: 10px;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    visibility: hidden;
+    
+}
+.feedback>span:first-child{
+    color: #236bae;
+}
+#visit-again
+{
+    
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    visibility: hidden;
+
+}
+
+script.js
+
+
+document.getElementById('checkout-button').addEventListener('click',()=>{
+    document.getElementById('feedback').style='visibility: visible;';
+
+})
+// document.getElementById('feedback').addEventListener('click',()=>{
+//     document.getElementById('feedback').style='visibility: hidden;';
+// }
+// )
+document.getElementById('submit').addEventListener('click',()=>{
+    document.getElementById('feedback').style='visibility: hidden;';
+    document.getElementById('visit-again').style="visibility:visible;"
+})
