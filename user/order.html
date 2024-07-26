@@ -376,4 +376,35 @@ button{
     }
 }
 
+script.js
+
+const pricevalue=20;
+document.getElementById('decrease').addEventListener('click',()=>{
+    const qtyres=document.getElementById('qty-result');
+    const value=Number(qtyres.innerText);
+    if(value>=2){
+        qtyres.innerText=value-1;
+        
+    }
+    else{
+        qtyres.innerText=1; 
+    }
+    
+    document.getElementById('price').innerText=pricevalue*Number(qtyres.innerText)
+    document.getElementById('subtotal').innerText
+
+})
+document.getElementById('increase').addEventListener('click',()=>{
+    const qtyres=document.getElementById('qty-result');
+    const value=Number(qtyres.innerText);
+  
+        qtyres.innerText=value+1;
+        
+        
+   
+    
+    document.getElementById('price').innerText=pricevalue*Number(qtyres.innerText)
+
+})
+
 
