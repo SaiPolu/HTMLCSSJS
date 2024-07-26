@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin payment</title>
+    <link rel="stylesheet" href="./payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+   <div class="admin-payment">
+    <div class="header">
+        <span>Dashboard</span>
+        <span >Menu</span>
+        <span>Tables</span>
+        <span >Users</span>
+        <span class="active">Payments</span>
+    </div>
+    <img id="user-profile" src="../assets/user1.png" alt="">
+    
+  
+    <div class="payment">
+        <section class="payment-heading">
+            <div>
+                <h1>Payments</h1>
+            </div>
+            <div>
+                <h2>Total Payment: 19125/-</h2>
+            </div>
+            <div>
+                <input type="text" placeholder="Search" >
+            </div>
+        </section>
+        <table>
+            <tr>
+           
+                <th>Name</th>
+                    <th>Email <i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-caret-down"></i></th>
+                    <th>Phone <i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-caret-down"></i></th>
+                    <th>Spent <i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-caret-down"></i></th>
+                    <th>Status <i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-caret-down"></i></th>
+            </tr>
+            <tr>
+                <td>abishek</td>
+                <td>abishek.d@iamneo.com</td>
+                <td>1234567890</td>
+                <td>364/-</td>
+                <td class="status-success">Successful</td>
+            </tr>
+            <tr>
+                <td>vinuthakk</td>
+                <td>vinutha644@iamneo.com</td>
+                <td>9359134303</td>
+                <td>115/-</td>
+                <td class="status-success">Successful</td>
+            </tr>
+            <tr>
+                <td>abishek</td>
+                <td>abishek.d@iamneo.com</td>
+                <td>1234567890</td>
+                <td>946/-</td>
+                <td class="status-success">Successful</td>
+            </tr>
+            <tr>
+                <td>abishek</td>
+                <td>abishek.d@iamneo.com</td>
+                <td>1234567890</td>
+                <td>1316/-</td>
+                <td class="status-success">Successful</td>
+            </tr>
+            <tr>
+                <td>vinuthakk</td>
+                    <td>vinutha644@iamneo.com</td>
+                    <td>9359134303</td>
+                    <td>150/-</td>
+                    <td class="status-success">Successful</td>
+            </tr>
+        </table>
+        <section>
+                    <button>< Previous</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>Next></button>
+        </section>
+
+    </div>
+
+   </div>
+</body>
+
+                    </html>
+
+styles.css
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.admin-payment{
+    width: 100%;
+}
+.header{
+    padding: 24px 20%;
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 3px lightgray;
+}
+#user-profile{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #0056b3;
+    position: absolute;
+    right: 7%;
+    top: 1.6%;
+
+}
+.payment{
+    padding: 20px 30px 50px;
+    box-shadow: inset 1px 1px 10px 1px lightgray;
+    margin: 20px;
+    border-radius: 10px;
+    position: relative;
+    
+}
+.active{
+    font-weight: bold;
+}
+button{
+    cursor: pointer;
+    color: white;
+}
+.payment-heading{
+    display: flex;
+    justify-content: space-between;
+}
+.payment-heading>h2{
+    position: relative;
+    left: -40%;
+    
+}
+.payment>section>button{
+    background-color: #e6aa0a;
+    border: none;
+    padding: 8px 6px;
+    border-radius: 4px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse  ;
+    margin: 30px 10px;
+
+    
+}
+table td,th{
+    padding: 18px 26px;
+    border-bottom: 1px solid lightgray;
+    text-align: start;
+}
+th>i:last-child{
+    position: relative;
+    left: -10px;
+    top: 5px;
+}
+.payment>section:last-child{
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+}
+.payment>section:last-child button:nth-child(2){
+    background-color: #0056b3;
+}
+button{
+    padding: 8px 12px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.pagination a:hover{
+    background-color: #f4f4f4;
+}
+.pagination a:active{
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.status-success{
+    color: green;
+    font-weight: bold;
+}
+
+                      
