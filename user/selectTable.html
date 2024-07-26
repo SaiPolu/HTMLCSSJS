@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select Table</title>
+    <link rel="stylesheet" href="./selectTable.css">
+</head>
+
+<body>
+    <div class="select-table-header">
+        <img src="../assets/logo.png" alt="logo">
+        <img src="../assets/user.png" id="user" alt="avatarimg">
+    </div>
+    <div class="select-table-body">
+
+        <section>
+            <img src="../assets/vaccant4seats.svg" alt="">
+            <img src="../assets/vaccant4seats.svg" alt="">
+        </section>
+        <section>
+            <img src="../assets/vaccant6seats.svg" alt="">
+            <img src="../assets/vaccant6seats.svg" alt="">
+        </section>
+        <section>
+            <img src="../assets/bookedhorizontalseats.svg" alt="">
+            <img src="../assets/bookedhorizontalseats.svg" alt="">
+        </section>
+        <section>
+            <img src="../assets/table3.svg" alt="">
+        </section>
+        
+    </div>
+    <div class="table1">
+        <h4>Table 1</h4>
+        <button>Select & Order food</button>
+    </div>
+
+    <div class="account-details">
+       <section>
+        <img src="../assets/user.png" alt="avatarimg">
+        <section>
+            <span>Abc</span>
+        <span>abc@gmail.com</span>
+        </section>
+       </section>
+        <span >Login date & time: 12-10-2023 10:07 AM</span>
+        <button>Logout</button>
+    </div>
+    <script src="./selectTable.js"></script>
+  
+</body>
+
+</html>
+
+
+
+styles.css
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+body{
+    padding:10px 25px ;
+}
+div{
+    padding: 10px 20px;
+    box-shadow: 1px 1px 10px 5px lightgray;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.select-table-header{
+    display: flex;
+    justify-content: space-between;
+    
+    
+
+}
+.select-table-header>img,.account-details>section>img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    
+    margin-right: 10px;
+    cursor: pointer;
+}
+img[alt=avatarimg]{
+    background-color:#236bae;
+}
+.select-table-body{
+    display: flex;
+    justify-content: space-evenly;
+    
+
+}
+.select-table-body>section{
+    display: flex;
+    flex-direction: column;
+}
+.table1{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding: 30px 0px;
+}
+.table1>button{
+    background-color: #236bae;
+    color: white;
+    border: none;
+    padding: 12px 10px;
+    border-radius: 8px;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    cursor: pointer;
+}
+.account-details{
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    right: 24px;
+    background-color: white;
+    visibility: hidden;
+    
+}
+.account-details>section{
+    display: flex;
+
+}
+.account-details>section>section{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 20px;
+
+}
+.account-details>section+span{
+    font-weight: bolder;
+    margin-top: 10px;
+}
+.account-details button{
+    width: 70px;
+    background-color: #fbe0eb;
+    color: #eb4791;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 5px;
+    position: relative;
+    left: 200px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+script.js
+
+
+let avatar=document.getElementById("user")
+avatar.addEventListener("mouseover",()=>{
+    document.getElementsByClassName("account-details")[0].style="visibility: visible;";
+
+})
+avatar.addEventListener("mouseleave",()=>{
+    document.getElementsByClassName("account-details")[0].style="visibility: hidden;";
+
+})
