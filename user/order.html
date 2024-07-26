@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="./order.css">
+</head>
+
+<body>
+    <div class="user-order">
+        <div class="user-order-left-body">
+
+            <nav>
+                <a href="#"><img src="../assets/starters.svg" alt="">Starters</a>
+                <a href="#"><img src="../assets/maingroup.svg" alt="">Main Course</a>
+                <a href="#"><img src="../assets/deserts.svg" alt="">Deserts</a>
+                <a href="#"><img src="../assets/bevarages.svg" alt="">Beverages</a>
+            </nav>
+            <section>
+                <aside>
+                    <div>
+                        <img src="../assets/starters.svg" alt="">
+                        <span>Veg</span>
+                    </div>
+                    <div>
+                        <img src="../assets/starters.svg" alt="">
+                        <span>Non veg</span>
+                    </div>
+                </aside>
+                <main>
+                    <div class="container">
+                        <div class="flip-card">
+                            <span>20% off</span>
+                            <div class="flip-card-inner">
+                                <img src="../assets/food.jpeg" alt="img">
+                                <section>
+                                    <h1>Pakoda</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod adipisici
+                                        voluptatum idmolestiae dolorem illum magnicum asperiorq</p>
+                                    <h2><span>&#8377;</span>20</h2>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                          <span>20% off</span>
+                            <div class="flip-card-inner">
+                                <img src="../assets/food.jpeg" alt="img">
+                                <section>
+                                    <h1>Pakoda</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod adipisici
+                                        voluptatum idmolestiae dolorem illum magnicum asperiorq</p>
+                                    <h2><span>&#8377;</span>20</h2>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                           <span>20% off</span>
+                            <div class="flip-card-inner">
+                                <img src="../assets/food.jpeg" alt="img">
+                                <section>
+                                    <h1>Pakoda</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod adipisici
+                                        voluptatum idmolestiae dolorem illum magnicum asperiorq</p>
+                                    <h2><span>&#8377;</span>20</h2>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                           <span>20% off</span>
+                            <div class="flip-card-inner">
+                                <img src="../assets/food.jpeg" alt="img">
+                                <section>
+                                    <h1>Pakoda</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod adipisici
+                                        voluptatum idmolestiae dolorem illum magnicum asperiorq</p>
+                                    <h2><span>&#8377;</span>20</h2>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                           <span>20% off</span>
+                            <div class="flip-card-inner">
+                                <img src="../assets/food.jpeg" alt="img">
+                                <section>
+                                    <h1>Pakoda</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod adipisici
+                                        voluptatum idmolestiae dolorem illum magnicum asperiorq</p>
+                                    <h2><span>&#8377;</span>20</h2>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                           <span>20% off</span>
+                            <div class="flip-card-inner">
+                                <img src="../assets/food.jpeg" alt="img">
+                                <section>
+                                    <h1>Pakoda</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod adipisici
+                                        voluptatum idmolestiae dolorem illum magnicum asperiorq</p>
+                                    <h2><span>&#8377;</span>20</h2>
+                                </section>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </main>
+            </section>
+        </div>
+        <div class="user-order-right-body">
+            <div>
+                <h3>Order Preview</h3>
+            <section>
+                <span>Pakoda</span>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum obcaecati atque enim. Blanditiis
+                    sed hic a et cupiditate facilis nulla.</p>
+                    <section id="qty">
+                        <button id="decrease" class="qty-btn">-</button>
+                    <span id="qty-result">1</span>
+                    <button id="increase" class="qty-btn">+</button>
+                    <span  class="price">&#8377;</span><strong id="price" class="price">20</strong>
+                    </section>
+                    <div>
+                        <span>Sub Total</span><span id="subtotal">40</span>
+                    </div>
+                    <div>
+                        <span>Service Charges</span><span>&#8377;10</span>
+                    </div>
+                    <div>
+                        <span>Total Payables</span><span>&#8377;50</span>
+                    </div>
+                    <button>Proceed</button>
+
+            </section>
+            </div>
+
+        </div>
+    </div>
+
+<script src="./order.js"></script>
+</body>
+
+</html>
+
+
+styles.css
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.user-order{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    box-shadow: 1px 1px 5px 3px lightgray;
+}
+.user-order-left-body{
+    width: 74%;
+    box-shadow: 1px 1px 5px 3px lightgray;
+    border-radius: 10px;
+  
+}
+.user-order-right-body
+{border-radius: 10px;
+    width: 25%;
+   
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 10px;
+    border-bottom: 1px solid lightgray;
+    box-shadow: 0px 1px 5px 2px lightgray;
+
+}
+nav a{
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+a:active,a:visited,a:link{
+    color: black;
+}
+nav>a>img{
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+}
+
+
+
+
+.user-order-left-body>section{
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.user-order-left-body>section>aside{
+    width: 12%;
+    border-right: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 5px 10px;
+    padding: 15px 7px;
+    
+}
+.user-order-left-body>section>aside>div {
+    margin-bottom: 15px;
+    
+
+}
+.user-order-left-body>section>main{
+    width: 86%;
+    
+    
+}
+.container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.flip-card{
+    width: 30%;
+    min-height: 330px;
+    box-shadow: 1px 1px 5px 3px lightgray;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px 10px;
+}
+.flip-card>span{
+    background-color: #d7006c;
+    display: inline-block;
+    border-radius: 8px;
+    padding: 4px 5px;
+    width: 70px;
+    color: white;
+    position: relative;
+    left: -4px;
+}
+.flip-card-inner{
+    position:relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner{
+    transform:rotateY(180deg);
+    
+}
+.flip-card-inner img{
+    width: 100px;
+    height: 100px;
+    position:relative;
+    left: 30%;
+    top: 25%;
+    border-radius: 8px;
+
+}
+.flip-card-inner section{
+   height: 45%;
+   margin-top: 20px;
+   padding: 10px 15px;
+}
+.flip-card-inner section>h1,.flip-card-inner section>h2{
+    text-align: center;
+}
+
+.user-order-right-body>div{
+    padding: 5px 5px 0px 5px;
+    border-radius: 10px;
+    
+    box-shadow: 0px 1px 2px 3px lightgrey;
+}
+.user-order-right-body>div>h3{
+    color: #236bae;
+    padding: 15px 10px;
+}
+.user-order-right-body>div>section{
+    background-color: #f8f7f7;
+    padding: 10px 5px;
+}
+.user-order-right-body>div>section>span:first-child{
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+}
+.user-order-right-body>div>section>p{
+    text-align: justify;
+}
+.user-order-right-body>div>section>div{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 3px;
+
+}
+#qty{
+    text-align: center;
+}
+.qty-btn{
+    padding: 5px 10px;
+
+}
+.price{
+    position: relative;
+    left: 30%;
+}
+button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.user-order-right-body>div>section>button:last-child{
+    background-color: #236bae;
+    padding: 10px 5px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media screen and  (max-width:1023px) {
+  
+    .user-order{
+        flex-direction: column;
+    }
+    nav{
+        font-size: 10px;
+    }
+
+    .user-order-left-body{
+        width: 100%;
+    }
+.user-order-right-body
+{
+    width: 100%;
+
+    margin-top: 10px;
+}
+    .user-order-left-body>section{
+      
+        
+        flex-direction: column;
+        
+
+    }
+    .user-order-left-body>section>aside{
+        width: 100%;
+      text-align: center;
+        
+    }
+    .user-order-left-body>section>main{
+        width: 100%;
+        text-align: justify;
+
+    }
+   
+    .flip-card{
+        width: 44%;
+        font-size: small;
+        min-height: 100px;
+    }
+    
+    .flip-card-inner img{
+        width: 50%;
+        height: 70px;
+    }
+}
+
+
