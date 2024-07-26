@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./login.css">
+
+</head>
+
+<body>
+
+    <body>
+        <div class="register-body">
+            <img src="../assets/login.png">
+            <div class="login">
+                <img src="../assets/logo.png">
+                <h1>Login to Your Account</h1>
+                <p>Welcome back! Select method to login</p>
+                <form id="login-form">
+                    <label>Email<sup>*</sup></label>
+                    <section>
+                        <img src="./assets/mailicon.svg" alt="">
+                        <input type="text" id="email" name="email" placeholder="example@gmail.com">
+                    </section>
+                    <p id="error-email" class="error-message"></p>
+                    <label>Password <sup>*</sup></label>
+                    <section>
+                        <img src="./assets/passwordicon.svg" alt="">
+                        <input type="password" id="password" name="password" placeholder=".....">
+
+                    </section>
+                    <p id="error-password" class="error-message"></p>
+                    <div>
+                        <input type="checkbox" value="Remember me">
+                        <label class="rememberme">Remember me</label>
+                        <a href="">forgot password</a>
+                    </div>
+                    <button type="submit" id="loginButton">Login</button>
+                    <div>
+                        <span>Don't have an account?</span>
+                        <a href="#">Create an account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // emailRegex=/^[a-zA-ZO-9%.+_-]+ @[a-zA-ZO-9.-]+\.[a-zA-Z]{2,}$/;
+            emailRegex = /\S+@\S+\.\S+/;
+            passwordRegex = /^(?=.*[a-z])(?=.*d)(?=.*\d)(?=.*[@!!%?&]){8,}$/;
+            if (email === '') {
+                document.getElementById('error-email').innerText = 'Email is required';
+
+            }
+            else if (!emailRegex.test(email)) {
+                document.getElementById('error-email').innerText = 'Invalid email address';
+
+            }
+            else {
+                document.getElementById('error-email').innerText = "";
+
+            }
+
+            if (password === '') {
+                document.getElementById('error-password').innerText = "Password is required";
+
+            }
+            else if (!passwordRegex.test(password)) {
+                document.getElementById('error-password').innerText = "Invalid password";
+
+            }
+            else {
+                document.getElementById('error-password').innerText = "";
+            }
+        });
+    </script>
+
+</html>
+
+
+
+styles.css
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-size: cover; */
+}
+.error-message {
+    color: red;
+}
+
+
+
+@media (max-width:767px) {
+    .register-body{
+        
+        height: 100vh;
+        background-color: #f8f7fc;
+    }
+    .register-body>img{
+        display: none;
+        
+    }
+    .login {
+        
+        background-color: #f8f7fc;
+        padding:18px 36px ;
+        font-size: small;
+       
+    }
+    .login>img{
+        margin: 20px 0px;
+    }
+    .login>h1{
+        color:#236bae ;
+        font-size:150%;
+        margin-bottom: 10px;
+        
+    }
+    #login-form{
+        
+        position: relative;
+        
+        width: 70%;
+        margin-left: 10%;
+        margin-top: 25%;
+    }
+    #login-form>section{
+        margin: 20px 0px;
+        
+    }
+    #login-form>section>input{
+        width: 80%;
+        padding: 10px 10px;
+        border: none;
+        
+    }
+    #login-form>section>img{
+        position: relative;
+        top: 3px;
+        display: inline-block;
+    }
+    #login-form>section>input::placeholder{
+        position: relative;
+        left: 20px;
+        
+        
+    }
+    #login-form>section>input:focus{
+        border: none;
+        outline: none;
+    }
+   
+    button{
+        width: 85%;
+        background-color: #236bae;
+        padding: 13px;
+        border: none;
+        color: white;
+        border-radius: 10px;
+        font-weight: bolder;
+        margin: 10px 0px;
+    }
+    #login-form>div{
+        margin: 20px 0px;
+        
+    }
+    input[type=checkbox],input[type=checkbox]+label{
+        display: none;
+    }
+    
+   #login-form>div>span+a{
+        display: block;
+        text-align: center;
+        padding: 8px 0px;
+    }
+    
+   
+
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+    
+    .register-body{
+        display: flex;
+        height: 100vh;
+        
+    }
+    
+    .register-body>img{
+        height: 100vh;
+        width: 55%;
+        
+    }
+    .login {
+        width: 45%;
+        background-color: #f8f7fc;
+        padding:18px 36px ;
+        font-size: medium;
+    }
+    .login>img{
+        margin: 20px 0px;
+    }
+    .login>h1{
+        color:#236bae ;
+        
+        margin-bottom: 10px;
+    }
+    #login-form{
+        
+        position: relative;
+        
+        width: 70%;
+        margin-left: 10%;
+        margin-top: 25%;
+    }
+    
+    #login-form>section{
+        margin: 12px 0px;
+    }
+    #login-form>section>input{
+        width: 90%;
+        padding: 10px 10px;
+        
+        border: none;
+    }
+    #login-form>section>img{
+        position: relative;
+        top: 3px;
+        display: inline-block;
+    }
+    #login-form>section>input::placeholder{
+        position: relative;
+        left: 20px;
+        
+        
+    }
+    #login-form>section>input:focus{
+        border: none;
+        outline: none;
+    }
+    #login-form>section+label{
+        margin: 70px 0px;
+        display: inline-block;
+    }
+    button{
+        width: 100%;
+        background-color: #236bae;
+        padding: 13px;
+        border: none;
+        color: white;
+        border-radius: 10px;
+        font-weight: bolder;
+        margin: 10px 0px;
+    }
+    #login-form>div{
+        margin: 10px 0px;
+        
+    }
+    input[type=checkbox],input[type=checkbox]+label{
+        display: none;
+    }
+    
+   #login-form>div>span+a{
+        display: block;
+        text-align: center;
+        padding: 8px 0px;
+    }
+    
+}
+
+@media (min-width:1024px) {
+    .register-body{
+        display: flex;
+        height: 100vh;
+        
+    }
+    .register-body>img{
+        height: 100vh;
+        width: 55%;
+        
+    }
+    .login {
+        width: 45%;
+        background-color: #f8f7fc;
+        padding:18px 36px ;
+    }
+    .login>img{
+        margin: 20px 0px;
+    }
+    .login>h1{
+        color:#236bae ;
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    #login-form{
+        padding: 30px;
+        
+        
+        width: 75%;
+        margin-left: 10%;
+    }
+    #login-form>section{
+        margin: 12px 0px;
+    }
+    #login-form>section>input{
+        width: 90%;
+        padding: 10px 10px;
+        
+        border: none;
+    }
+    #login-form>section>img{
+        position: relative;
+        top: 3px;
+        display: inline-block;
+    }
+    #login-form>section>input::placeholder{
+        position: relative;
+        left: 20px;
+        
+        
+    }
+    #login-form>section>input:focus{
+        border: none;
+        outline: none;
+    }
+    #login-form>section+label{
+        margin: 70px 0px;
+        display: inline-block;
+    }
+    .rememberme{
+        display: inline-block;
+        margin-right: 80px;
+    }
+    button{
+        width: 100%;
+        background-color: #236bae;
+        padding: 13px;
+        border: none;
+        color: white;
+        border-radius: 10px;
+        font-weight: bolder;
+        margin: 10px 0px;
+    }
+    #login-form>div{
+        margin: 10px 0px;
+        
+    }
+    
+}
