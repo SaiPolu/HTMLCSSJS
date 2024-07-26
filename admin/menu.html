@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="header">
+    <span>Dashboard</span>
+    <span class="active">Menu</span>
+    <span>Tables</span>
+    <span>Users</span>
+    <span>Payments</span>
+</div>
+<img id="user-profile" src="../assets/user1.png" alt="user profile">
+    <div class="menu">
+        <section class="menu-heading">
+            <h1>Menu Items</h1>
+            <button>+Add Item</button>
+        </section>
+        <table>
+            <tr>
+                <th>Item Name <i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-caret-down"></i></th>
+                <th>Category <i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-caret-down"></i></th>
+                <th>Price <i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-caret-down"></i></th>
+                <th>status <i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-caret-down"></i></th>
+            </tr>
+            <tr>
+                <td>Carrot Halwa</td>
+                <td>Deserts</td>
+                <td>$15</td>
+                <td>Available</td>
+            </tr>
+            <tr>
+                <td>Chicken lollipop</td>
+                <td>Starter</td>
+                <td>$250</td>
+                <td>Unavailable</td>
+            </tr>
+            <tr>
+                <td>Gobi Manchurian</td>
+                <td>Starter</td>
+                <td>$50</td>
+                <td>Unavailable</td>
+            </tr>
+            <tr>
+                <td>Chicken Biryani</td>
+                <td>Main Coune</td>
+                <td>$150</td>
+                <td>Available</td>
+            </tr>
+            <tr>
+                <td>Butter Chicken</td>
+                <td>
+                    <Main> Course</Main>
+                </td>
+                <td>$299</td>
+                <td>Available</td>
+            </tr>
+        </table>
+        <section>
+                    <button>< Previous</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>Next></button>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
+
+styles.css
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.menu{
+    
+    padding: 20px 30px 50px;
+    box-shadow: inset 1px 1px 10px 1px lightgray;
+    margin: 20px;
+    border-radius: 10px;
+    position: relative;
+  
+    
+}
+.header{
+    padding: 24px 20%;
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 3px lightgray;
+}
+#user-profile{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #0056b3;
+    position: absolute;
+    right: 7%;
+    top: 1.6%;
+
+}
+.active{
+    font-weight: bold;
+}
+button{
+    cursor: pointer;
+    color: white;
+}
+.menu-heading{
+    display: flex;
+    justify-content: space-between;
+}
+.menu>section>button{
+    background-color: #e6aa0a;
+    border: none;
+    padding: 8px 6px;
+    border-radius: 4px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse  ;
+    margin: 30px 10px;
+
+    
+}
+table td,th{
+    padding: 18px 86px;
+    border-bottom: 1px solid lightgray;
+    text-align: start;
+}
+th>i:last-child{
+    position: relative;
+    left: -10px;
+    top: 5px;
+}
+.menu>section:last-child{
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+}
+.menu>section:last-child button:nth-child(2){
+    background-color: #0056b3;
+}
+@media screen and (max-width:1023px) {
+    body{
+        font-size: small;
+        padding: 0px;
+    }
+    .menu{
+        margin: 15px 5px;
+    }
+    .header{
+
+        width: 100%;
+        margin: 0px;
+        padding: 20px 3px;
+
+    }
+    .header>span{
+        padding:0px;
+        display: inline-block;
+        
+    }
+  
+    table td,th{
+        padding: 10px ;
+    }
+   
+    #user-profile{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        position: absolute;
+        right: 5px;
+       
+    }
+    .header>span:last-child{
+        position: relative;
+        left: -20px;
+    }
+}
+
+
+                      
+                      
