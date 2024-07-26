@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="dashboard">
+        <div class="dashboard-header">
+            <img src="../assets/logo.png" alt="logo">
+            <div class="header">
+                <span>Dashboard</span>
+                <span class="active">Menu</span>
+                <span>Tables</span>
+                <span>Users</span>
+                <span>Payments</span>
+            </div>
+            <img id="user-profile" src="../assets/user1.png" alt="user profile">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="dashboard-body">
+            <div class="dashboard-body-content">
+                <div id="total-amount">
+                    <span>Total Amount</span>
+                    <strong>&#8377;<strong>29,114.00</strong></strong>
+                </div>
+                <div id="total-no-users">
+                    <span>Total No. Users</span>
+                   <strong>&#8377;<strong>39</strong></strong>
+                </div>
+                <div id="total-no-dishes">
+                    <span>Total No. Dishes</span>
+                    <strong>&#8377;<strong>346</strong></strong>
+                </div>
+                <div id="total-no-tables">
+                    <span>Total No. Tables</span>
+                    <strong>&#8377;<strong>23</strong></strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./dashboard.js"></script>
+</body>
+</html>
+
+
+styles.css
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.dashboard-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 5px 3px lightgray;
+    margin: 15px 15px;
+    border-radius: 10px;
+    align-items: center;
+}
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    font-weight: 300;
+}
+.dashboard-header>img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+span{
+    cursor: pointer;
+}
+#user-profile{
+   
+    background-color: #ad7b20;
+}
+.dashboard-header>i{
+    display: none;
+}
+.dashboard-body
+{
+    padding: 0px 10px;
+    box-shadow: 1px 1px 5px 2px lightgray;
+    margin: 5px 15px;
+    border-radius: 5px;
+}
+.dashboard-body-content
+{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 80vh;
+    padding-top: 15px 2px;
+    
+}
+.dashboard-body-content>div
+{   height: 110px;
+    width: 24%;
+    box-shadow: 1px 1px 5px 3px lightgray;
+    border-radius: 10px;
+    margin: 10px 5px;
+    color: white;
+    cursor: pointer;
+    
+    
+}
+
+.dashboard-body-content>div:first-child{
+    background-image: linear-gradient(to left top, #846978, #94607b, #a5547c, #b5457b, #c52f78);
+}
+.dashboard-body-content>div:nth-child(2)
+{
+    background-image: linear-gradient(to right bottom, #ef66a0, #f37399, #f58094, #f58e93, #f39b94);
+}
+.dashboard-body-content>div:nth-child(3)
+{
+    background-image: linear-gradient(to bottom, #5b88c7, #5b93ce, #5d9dd3, #62a8d8, #68b2dd);
+}
+.dashboard-body-content>div:nth-child(4)
+{
+    background-image: linear-gradient(to top, #044f6e, #044c6b, #044a68, #044765, #044562);
+}
+.dashboard-body-content>div>span{
+    display: inline-block;
+    position: relative;
+    left: 8%;
+    top: 8%;
+    font-weight: bold;
+}
+.dashboard-body-content>div>strong{
+    display: inline-block;
+    position: relative;
+    right: 10%;
+    top: 40%;
+    font-size: 25px;
+}
+@media screen and (max-width:1024px) 
+{
+    .header{
+        display: none;
+    }
+    
+    .dashboard-header>i{
+        display: inline-block;
+        padding: 10px 15px;
+        font-size: x-large;
+        box-shadow: 1px 1px 5px 2px lightgray;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .dashboard-header>img{
+        width: 40px;
+        height: 40px;
+        
+    }
+    #user-profile{
+        display: none;
+    }
+
+
+
+}
+@media screen and (max-width:768px) {
+    .dashboard-body-content
+    { flex-direction: column;
+    }
+    .dashboard-body-content>div
+    {   height: 110px;
+        width: 98%;  
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px){
+
+    .dashboard-body-content
+    {
+        min-height: fit-content;
+    }
+    .dashboard-body-content>div
+    {  
+        width: 48%;
+    }
+   
+
+    
+}
