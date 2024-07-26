@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin user</title>
+    <link rel="stylesheet" href="./user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="header">
+        <span>Dashboard</span>
+        
+        <span >Menu</span>
+        <span>Tables</span>
+        <span class="active">Users</span>
+        <span>Payments</span>
+    </div>
+  
+    <div class="user">
+        <section class="user-heading">
+            <h1>Users</h1>
+            
+        </section>
+        <table>
+            <tr>
+                <th>Name<i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-caret-down"></i></th>
+                <th>Email <i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-caret-down"></i></th>
+                <th>Phone No <i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-caret-down"></i></th>
+                <th>Action <i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-caret-down"></i></th>
+            </tr>
+            <tr>
+                <td>Ramya</td>
+                <td>ramya@gmail.com</td>
+                <td>8796836687</td>
+                <td><button>View Rating</button></td>
+            </tr>
+            <tr>
+                <td>harish</td>
+                <td>harish@gmail.com</td>
+                <td>9347274230</td>
+                <td><button>View Rating</button></td>
+            </tr>
+            <tr>
+                <td>Jayanth</td>
+                <td>jayanthjanu@gmail.com</td>
+                <td>6304562383</td>
+                <td><button>View Rating</button></td>
+            </tr>
+            <tr>
+                <td>Raja</td>
+                <td>9876543210</td>
+                <td>raja@gmail</td>
+                <td><button>View Rating</button></td>
+            </tr>
+            <tr>
+                <td>Butter Chicken</td>
+                <td>
+                    <Main> Course</Main>
+                </td>
+                <td>$299</td>
+                <td><button>View Rating</button></td>
+            </tr>
+        </table>
+        <section>
+                    <button>< Previous</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>Next></button>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
+
+style.css
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.header{
+    padding: 24px 20%;
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 3px lightgray;
+}
+.user{
+    
+    padding: 20px 30px 50px;
+    box-shadow: inset 1px 1px 10px 1px lightgray;
+    margin: 20px;
+    border-radius: 10px;
+    position: relative;
+    
+}
+#user-profile{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #0056b3;
+    position: absolute;
+    right: 7%;
+    top: 1.6%;
+
+}
+.active{
+    font-weight: bold;
+}
+button{
+    cursor: pointer;
+    color: white;
+}
+.user-heading{
+    display: flex;
+    justify-content: space-between;
+}
+.user>section>button{
+    background-color: #e6aa0a;
+    border: none;
+    padding: 8px 6px;
+    border-radius: 4px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse  ;
+    margin: 30px 10px;
+
+    
+}
+table td,th{
+    padding: 18px 86px;
+    border-bottom: 1px solid lightgray;
+    text-align: start;
+}
+th>i:last-child{
+    position: relative;
+    left: -10px;
+    top: 5px;
+}
+.user>section:last-child{
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+}
+.user>section:last-child button:nth-child(2){
+    background-color: #0056b3;
+}
+button{
+    padding: 8px 12px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+                      
